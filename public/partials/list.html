@@ -1,22 +1,37 @@
+<!---->
+<div class="col-md-5 pull-right">
+    <!-- Creates Main Panel -->
+    <div class="panel panel-default">
+        <!-- Panel Title -->
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">What do you feel like eating today? <span></span></h2>
+        </div>
+        <!-- Panel Body -->
+        <div class="panel-body">
+            <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+            <form name="addForm">
+                <!-- Text Boxes-->
+                <div ng-repeat="hardCodeUser in hardCodeUsers" class="form-group col-md-12 pic well">
 
-    <div  class="container">
-        <div ng-repeat="hardCodeUser in hardCodeUsers" class="row">
-            <div class="col-xs-7 pull-left">
-                <div class="col-xs-3 pull-left"><img ng-src="{{hardCodeUser.img}}" alt=""/></div>
-                <div class="col-xs-4">
-                    <h2>{{hardCodeUser.name}}</h2>
-                    <h5>{{hardCodeUser.dish}}</h5> -<h5>{{hardCodeUser.dietaryOptions}}</h5>- <h5>{{hardCodeUser.Price}}NIS</h5> <br/>
-                    <span class="glyphicon glyphicon-thumbs-up" ></span>
-                    <span class="glyphicon glyphicon-thumbs-down"></span> -
-                    <!--  <ui-view>template reviews to do</ui-view> -->
-                    <button ui-sref="comment" class="btn btn-primary" type="submit">Reviews</button>
-                    <br/>
-                    <h5>{{hardCodeUser.locationHC}}</h5> - <h5>{{hardCodeUser.dietaryOptions}}</h5> <br/>
-                    <a ui-sref="order" target="_blank">Order...</a>
-                    <!-- display last recent review with an <ui-view></ui-view>-->
+                        <span>
+                             <h4><strong>{{hardCodeUser.name}}</strong></h4>
+
+                            <strong> Type Of Food:</strong> {{hardCodeUser.type}}  -   {{hardCodeUser.dish}}
+                             <br>
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>    {{hardCodeUser.dietaryOptions}}
+                            <br>
+                             <i class="fa fa-money" aria-hidden="true"></i>  Price  {{hardCodeUser.Price}} NIS
+                            <br>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>    {{hardCodeUser.locationHC}}
+                            <br>
+                            <button class="btn btn-success" type="button"><i class="fa fa-credit-card"
+                                                                             aria-hidden="true"></i>  Start Order</button>
+                            </span>
+                    <div class="col-md-6 pull-left"><img class="fotos" ng-src="{{hardCodeUser.img}}"
+                                                         style="width:200px; height:150px">
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-5 pull-right" id="map"><img src="" alt=""/>blabla</div>
+            </form>
         </div>
     </div>
-
+</div>

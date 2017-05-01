@@ -11,7 +11,7 @@ foodController.controller('foodController', function ($scope, gservice) {
             Price: "30",
             img: "https://static1.squarespace.com/static/50106d5684aed4702b7242ed/t/530a60e0e4b0dbc78d16cbdf/1432352707452/ThaiGreenCurry.jpg",
             type: "Thai",
-            locationHC: "Kibuttz Galuyot 30"
+            locationHC: "Kibuttz G. 30"
 
         },
 

@@ -30,6 +30,15 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 
             // All else forward to the Join Home Cook Team Control Panel
         })
+
+        .state('/orderForm', {
+            url: '/orderForm',
+            controller: 'foodController',
+            templateUrl: 'partials/orderForm.html',
+
+            // All else forward to the Join Home Cook Team Control Panel
+        })
+
         .state('auth', {
             url: '/auth/?token&name',
             controller: function($rootScope, $stateParams, $state, $http) {
